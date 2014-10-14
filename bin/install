@@ -1,0 +1,14 @@
+#!/bin/bash -e
+
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+mkdir -p ${OPENSHIFT_ORACLE_DIR}/run
+mkdir -p ${OPENSHIFT_ORACLE_DIR}/log
+mkdir -p ${OPENSHIFT_ORACLE_DIR}/var/events
+
+set_env_var 'OPENSHIFT_ORACLE_DB_PASSWORD' "redhat123" ${OPENSHIFT_ORACLE_DIR}/env
+set_env_var 'OPENSHIFT_ORACLE_DB_CONNECTION_URL' "jdbc:oracle:thin:@osetraining.c8ekt7aie0ck.eu-west-1.rds.amazonaws.com:1521:OSE" ${OPENSHIFT_ORACLE_DIR}/env
+set_env_var 'OPENSHIFT_ORACLE_DB_USERNAME' "gshipley" ${OPENSHIFT_ORACLE_DIR}/env
+
+client_result "Oracle connection information has been added to your applicaiton."
+client_result ""

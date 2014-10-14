@@ -1,0 +1,28 @@
+---
+Name: oracle
+Cartridge-Short-Name: ORACLE
+Architecture: x86_64
+Display-Name: oracle 1.0
+Description: Oracle connector cartridge for JBoss EAP
+Version: '1.0'
+Versions:
+- '1.0'
+Cartridge-Version: 0.0.1
+Cartridge-Vendor: gshipley
+License: GPL
+Vendor: gshipley
+Categories:
+- service
+- embedded
+Website: http://www.openshift.com
+Provides:
+- oracle 
+Scaling:
+  Min: 1
+  Max: -1
+Group-Overrides:
+- components:
+  - oracle-1.0
+  - web_framework
+
+Source-Url: https://github.com/gshipley/openshift-cartridge-oracle-saas.git
