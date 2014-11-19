@@ -7,7 +7,7 @@ mkdir -p ${OPENSHIFT_ORACLE_DIR}/log
 mkdir -p ${OPENSHIFT_ORACLE_DIR}/var/events
 
 set_env_var 'OPENSHIFT_ORACLE_DB_PASSWORD' "redhat123" ${OPENSHIFT_ORACLE_DIR}/env
-set_env_var 'OPENSHIFT_ORACLE_DB_CONNECTION_URL' "jdbc:oracle:thin:@aussieshift.cx4kmhfj2frm.ap-southeast-2.rds.amazonaws.com:1521:Aussie" ${OPENSHIFT_ORACLE_DIR}/env
+set_env_var 'OPENSHIFT_ORACLE_DB_CONNECTION_URL' "jdbc:oracle:thin:@aussieshift.cx4kmhfj2frm.ap-southeast-2.rds.amazonaws.com:1521:ORCL" ${OPENSHIFT_ORACLE_DIR}/env
 set_env_var 'OPENSHIFT_ORACLE_DB_USERNAME' "gshipley" ${OPENSHIFT_ORACLE_DIR}/env
 
 client_result "Oracle connection information has been added to your applicaiton."
